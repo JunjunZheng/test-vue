@@ -1,5 +1,8 @@
 <template>
-  <div class="register">注册页面</div>
+  <div class="register">
+    注册页面
+    你好
+  </div>
 </template>
 
 <script>

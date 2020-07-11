@@ -33,6 +33,15 @@ export default {
       password: ''
     }
   },
+  created() {
+    // console.log(this.$route)
+    // 使用query获取参数
+    // this.username = this.$route.query.username
+    // this.password = this.$route.query.password
+    // 使用params获取参数
+    this.username = this.$route.params.username
+    this.password = this.$route.params.password
+  },
   methods: {
     async login() {
       const userNameResult = this.$refs.username.validate(this.username)
@@ -59,8 +68,6 @@ export default {
         } else {
           this.$toast.fail(message)
         }
-
-        // console.log(res)
       }
     }
   }
